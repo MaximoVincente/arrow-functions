@@ -195,6 +195,6 @@ joe.scopeArrow();
 // 1. What is "this" when joe.scope() is invoked?
 // Student{name: 'Joe', age: 'Schmoe', hometown: 100} I'm assuming that the hometown is Schmoe and the age is 100, but because when the new instance joe was created, the argument 2 is Schmoe, and parameter 2 in the contstructor function Student is age.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-// 
+// Window{window: Window, self: Window, document: document, name: '', location: Location,…}
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Arrow functions do not define their own context, because it does not have its own context, so they inherit it from the parent scope whenever this is called. In this case this is not refering to the function being called like the function "scope" is, it refers to the scope where "scopeArrow" is present.
